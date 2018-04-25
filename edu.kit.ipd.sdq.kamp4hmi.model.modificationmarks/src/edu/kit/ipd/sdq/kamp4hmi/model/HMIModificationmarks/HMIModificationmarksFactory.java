@@ -2,9 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks;
 
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.ActorStep;
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
-
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step;
 import org.eclipse.emf.ecore.EFactory;
 
 /**
@@ -23,6 +21,15 @@ public interface HMIModificationmarksFactory extends EFactory {
 	 * @generated
 	 */
 	HMIModificationmarksFactory eINSTANCE = edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.impl.HMIModificationmarksFactoryImpl.init();
+
+	/**
+	 * Returns a new object of class '<em>HMI Modification Marks Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HMI Modification Marks Repository</em>'.
+	 * @generated
+	 */
+	HMIModificationMarksRepository createHMIModificationMarksRepository();
 
 	/**
 	 * Returns a new object of class '<em>HMI Seed Modifications</em>'.
@@ -52,13 +59,22 @@ public interface HMIModificationmarksFactory extends EFactory {
 	HMIChangePropagationDueToSoftwareDependency createHMIChangePropagationDueToSoftwareDependency();
 
 	/**
+	 * Returns a new object of class '<em>HMI Modify Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HMI Modify Step</em>'.
+	 * @generated
+	 */
+	<T extends Step> HMIModifyStep<T> createHMIModifyStep();
+
+	/**
 	 * Returns a new object of class '<em>HMI Modify Actor Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>HMI Modify Actor Step</em>'.
 	 * @generated
 	 */
-	<T extends ActorStep> HMIModifyActorStep<T> createHMIModifyActorStep();
+	HMIModifyActorStep createHMIModifyActorStep();
 
 	/**
 	 * Returns a new object of class '<em>HMI Modify System Step</em>'.
@@ -67,7 +83,7 @@ public interface HMIModificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>HMI Modify System Step</em>'.
 	 * @generated
 	 */
-	<T extends SystemStep> HMIModifySystemStep<T> createHMIModifySystemStep();
+	HMIModifySystemStep createHMIModifySystemStep();
 
 	/**
 	 * Returns the package supported by this factory.

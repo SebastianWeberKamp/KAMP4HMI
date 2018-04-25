@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.util;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.*;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -70,6 +71,7 @@ public class Kamp4hmiModelSwitch<T> extends Switch<T> {
 				Step step = (Step)theEObject;
 				T result = caseStep(step);
 				if (result == null) result = caseHMIElement(step);
+				if (result == null) result = caseIdentifier(step);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -78,6 +80,7 @@ public class Kamp4hmiModelSwitch<T> extends Switch<T> {
 				T result = caseActorStep(actorStep);
 				if (result == null) result = caseStep(actorStep);
 				if (result == null) result = caseHMIElement(actorStep);
+				if (result == null) result = caseIdentifier(actorStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -86,6 +89,7 @@ public class Kamp4hmiModelSwitch<T> extends Switch<T> {
 				T result = caseSystemStep(systemStep);
 				if (result == null) result = caseStep(systemStep);
 				if (result == null) result = caseHMIElement(systemStep);
+				if (result == null) result = caseIdentifier(systemStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -105,6 +109,7 @@ public class Kamp4hmiModelSwitch<T> extends Switch<T> {
 				If if_ = (If)theEObject;
 				T result = caseIf(if_);
 				if (result == null) result = caseHMIElement(if_);
+				if (result == null) result = caseIdentifier(if_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,12 +117,14 @@ public class Kamp4hmiModelSwitch<T> extends Switch<T> {
 				For for_ = (For)theEObject;
 				T result = caseFor(for_);
 				if (result == null) result = caseHMIElement(for_);
+				if (result == null) result = caseIdentifier(for_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case Kamp4hmiModelPackage.HMI_ELEMENT: {
 				HMIElement hmiElement = (HMIElement)theEObject;
 				T result = caseHMIElement(hmiElement);
+				if (result == null) result = caseIdentifier(hmiElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -263,6 +270,21 @@ public class Kamp4hmiModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCondition(Condition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifier(Identifier object) {
 		return null;
 	}
 

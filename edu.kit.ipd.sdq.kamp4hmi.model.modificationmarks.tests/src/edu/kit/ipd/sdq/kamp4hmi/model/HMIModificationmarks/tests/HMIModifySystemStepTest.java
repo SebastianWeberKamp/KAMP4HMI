@@ -4,9 +4,6 @@ package edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.tests;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifySystemStep;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HMIModifySystemStepTest extends TestCase {
-
-	/**
-	 * The fixture for this HMI Modify System Step test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HMIModifySystemStep<?> fixture = null;
+public class HMIModifySystemStepTest extends HMIModifyStepTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +34,14 @@ public class HMIModifySystemStepTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this HMI Modify System Step test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(HMIModifySystemStep<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this HMI Modify System Step test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected HMIModifySystemStep<?> getFixture() {
-		return fixture;
+	@Override
+	protected HMIModifySystemStep getFixture() {
+		return (HMIModifySystemStep)fixture;
 	}
 
 	/**

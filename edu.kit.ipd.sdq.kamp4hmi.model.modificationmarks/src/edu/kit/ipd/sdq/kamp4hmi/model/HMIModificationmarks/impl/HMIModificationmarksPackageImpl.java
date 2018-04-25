@@ -6,13 +6,14 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.AbstractKAMP4HMIModificationRepository;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIChangePropagationDueToSoftwareDependency;
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationRepository;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyActorStep;
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyStep;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifySystemStep;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMISeedModifications;
-
 import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Kamp4hmiModelPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
@@ -20,6 +21,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -43,6 +45,13 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass hmiModificationMarksRepositoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass hmiSeedModificationsEClass = null;
 
 	/**
@@ -58,6 +67,13 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 	 * @generated
 	 */
 	private EClass hmiChangePropagationDueToSoftwareDependencyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hmiModifyStepEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,8 +169,35 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getHMIModificationMarksRepository() {
+		return hmiModificationMarksRepositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHMISeedModifications() {
 		return hmiSeedModificationsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHMISeedModifications_ActorStepModification() {
+		return (EReference)hmiSeedModificationsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHMISeedModifications_SystemStepModification() {
+		return (EReference)hmiSeedModificationsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -173,6 +216,33 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 	 */
 	public EClass getHMIChangePropagationDueToSoftwareDependency() {
 		return hmiChangePropagationDueToSoftwareDependencyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHMIChangePropagationDueToSoftwareDependency_ActorStepModification() {
+		return (EReference)hmiChangePropagationDueToSoftwareDependencyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHMIChangePropagationDueToSoftwareDependency_SystemStepModification() {
+		return (EReference)hmiChangePropagationDueToSoftwareDependencyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHMIModifyStep() {
+		return hmiModifyStepEClass;
 	}
 
 	/**
@@ -223,11 +293,19 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 		// Create classes and their features
 		abstractKAMP4HMIModificationRepositoryEClass = createEClass(ABSTRACT_KAMP4HMI_MODIFICATION_REPOSITORY);
 
+		hmiModificationMarksRepositoryEClass = createEClass(HMI_MODIFICATION_MARKS_REPOSITORY);
+
 		hmiSeedModificationsEClass = createEClass(HMI_SEED_MODIFICATIONS);
+		createEReference(hmiSeedModificationsEClass, HMI_SEED_MODIFICATIONS__ACTOR_STEP_MODIFICATION);
+		createEReference(hmiSeedModificationsEClass, HMI_SEED_MODIFICATIONS__SYSTEM_STEP_MODIFICATION);
 
 		hmiModificationRepositoryEClass = createEClass(HMI_MODIFICATION_REPOSITORY);
 
 		hmiChangePropagationDueToSoftwareDependencyEClass = createEClass(HMI_CHANGE_PROPAGATION_DUE_TO_SOFTWARE_DEPENDENCY);
+		createEReference(hmiChangePropagationDueToSoftwareDependencyEClass, HMI_CHANGE_PROPAGATION_DUE_TO_SOFTWARE_DEPENDENCY__ACTOR_STEP_MODIFICATION);
+		createEReference(hmiChangePropagationDueToSoftwareDependencyEClass, HMI_CHANGE_PROPAGATION_DUE_TO_SOFTWARE_DEPENDENCY__SYSTEM_STEP_MODIFICATION);
+
+		hmiModifyStepEClass = createEClass(HMI_MODIFY_STEP);
 
 		hmiModifyActorStepEClass = createEClass(HMI_MODIFY_ACTOR_STEP);
 
@@ -263,16 +341,13 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 
 		// Create type parameters
 		ETypeParameter abstractKAMP4HMIModificationRepositoryEClass_T = addETypeParameter(abstractKAMP4HMIModificationRepositoryEClass, "T");
-		ETypeParameter hmiModifyActorStepEClass_T = addETypeParameter(hmiModifyActorStepEClass, "T");
-		ETypeParameter hmiModifySystemStepEClass_T = addETypeParameter(hmiModifySystemStepEClass, "T");
+		ETypeParameter hmiModifyStepEClass_T = addETypeParameter(hmiModifyStepEClass, "T");
 
 		// Set bounds for type parameters
 		EGenericType g1 = createEGenericType(this.getHMISeedModifications());
 		abstractKAMP4HMIModificationRepositoryEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theKamp4hmiModelPackage.getActorStep());
-		hmiModifyActorStepEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theKamp4hmiModelPackage.getSystemStep());
-		hmiModifySystemStepEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(theKamp4hmiModelPackage.getStep());
+		hmiModifyStepEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModificationRepository());
@@ -281,6 +356,10 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 		g2 = createEGenericType(theModificationmarksPackage.getChangePropagationStep());
 		g1.getETypeArguments().add(g2);
 		abstractKAMP4HMIModificationRepositoryEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getAbstractKAMP4HMIModificationRepository());
+		g2 = createEGenericType(this.getHMISeedModifications());
+		g1.getETypeArguments().add(g2);
+		hmiModificationMarksRepositoryEClass.getEGenericSuperTypes().add(g1);
 		hmiSeedModificationsEClass.getESuperTypes().add(theModificationmarksPackage.getAbstractSeedModifications());
 		g1 = createEGenericType(this.getAbstractKAMP4HMIModificationRepository());
 		g2 = createEGenericType(this.getHMISeedModifications());
@@ -288,26 +367,36 @@ public class HMIModificationmarksPackageImpl extends EPackageImpl implements HMI
 		hmiModificationRepositoryEClass.getEGenericSuperTypes().add(g1);
 		hmiChangePropagationDueToSoftwareDependencyEClass.getESuperTypes().add(theModificationmarksPackage.getChangePropagationStep());
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(hmiModifyActorStepEClass_T);
+		g2 = createEGenericType(hmiModifyStepEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(ecorePackage.getEObject());
+		g1.getETypeArguments().add(g2);
+		hmiModifyStepEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getHMIModifyStep());
+		g2 = createEGenericType(theKamp4hmiModelPackage.getActorStep());
 		g1.getETypeArguments().add(g2);
 		hmiModifyActorStepEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(hmiModifySystemStepEClass_T);
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		g1 = createEGenericType(this.getHMIModifyStep());
+		g2 = createEGenericType(theKamp4hmiModelPackage.getSystemStep());
 		g1.getETypeArguments().add(g2);
 		hmiModifySystemStepEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractKAMP4HMIModificationRepositoryEClass, AbstractKAMP4HMIModificationRepository.class, "AbstractKAMP4HMIModificationRepository", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(hmiModificationMarksRepositoryEClass, HMIModificationMarksRepository.class, "HMIModificationMarksRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(hmiSeedModificationsEClass, HMISeedModifications.class, "HMISeedModifications", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHMISeedModifications_ActorStepModification(), this.getHMIModifyActorStep(), null, "actorStepModification", null, 0, -1, HMISeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHMISeedModifications_SystemStepModification(), this.getHMIModifySystemStep(), null, "systemStepModification", null, 0, -1, HMISeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hmiModificationRepositoryEClass, HMIModificationRepository.class, "HMIModificationRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(hmiChangePropagationDueToSoftwareDependencyEClass, HMIChangePropagationDueToSoftwareDependency.class, "HMIChangePropagationDueToSoftwareDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHMIChangePropagationDueToSoftwareDependency_ActorStepModification(), this.getHMIModifyActorStep(), null, "actorStepModification", null, 0, -1, HMIChangePropagationDueToSoftwareDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHMIChangePropagationDueToSoftwareDependency_SystemStepModification(), this.getHMIModifySystemStep(), null, "systemStepModification", null, 0, -1, HMIChangePropagationDueToSoftwareDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(hmiModifyStepEClass, HMIModifyStep.class, "HMIModifyStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(hmiModifyActorStepEClass, HMIModifyActorStep.class, "HMIModifyActorStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

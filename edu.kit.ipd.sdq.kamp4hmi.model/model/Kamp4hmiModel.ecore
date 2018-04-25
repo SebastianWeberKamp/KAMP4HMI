@@ -4,8 +4,7 @@
     nsPrefix="Kamp4hmiModel">
   <eClassifiers xsi:type="ecore:EClass" name="Step" abstract="true" interface="true"
       eSuperTypes="#//HMIElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" upperBound="-1"
-        eType="#//HMIElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" eType="#//HMIElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActorStep" eSuperTypes="#//Step"/>
   <eClassifiers xsi:type="ecore:EClass" name="SystemStep" eSuperTypes="#//Step">
@@ -42,9 +41,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopEndSuccessor" lowerBound="1"
         eType="#//Step"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HMIElement" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HMIElement" abstract="true" eSuperTypes="../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Identifier"/>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

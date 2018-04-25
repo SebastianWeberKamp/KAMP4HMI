@@ -2,15 +2,12 @@
  */
 package edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.impl;
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractModificationImpl;
-
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifySystemStep;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @generated
  */
-public class HMIModifySystemStepImpl<T extends SystemStep> extends AbstractModificationImpl<T, EObject> implements HMIModifySystemStep<T> {
+public class HMIModifySystemStepImpl extends HMIModifyStepImpl<SystemStep> implements HMIModifySystemStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,17 +34,6 @@ public class HMIModifySystemStepImpl<T extends SystemStep> extends AbstractModif
 	@Override
 	protected EClass eStaticClass() {
 		return HMIModificationmarksPackage.Literals.HMI_MODIFY_SYSTEM_STEP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * This is specialized for the more specific type known in this context.
-	 * @generated
-	 */
-	@Override
-	public void setAffectedElement(T newAffectedElement) {
-		super.setAffectedElement(newAffectedElement);
 	}
 
 } //HMIModifySystemStepImpl

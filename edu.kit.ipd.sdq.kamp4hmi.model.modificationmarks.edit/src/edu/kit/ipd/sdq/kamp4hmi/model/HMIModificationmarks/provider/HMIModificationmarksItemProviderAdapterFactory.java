@@ -72,6 +72,29 @@ public class HMIModificationmarksItemProviderAdapterFactory extends HMIModificat
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HMIModificationMarksRepositoryItemProvider hmiModificationMarksRepositoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHMIModificationMarksRepositoryAdapter() {
+		if (hmiModificationMarksRepositoryItemProvider == null) {
+			hmiModificationMarksRepositoryItemProvider = new HMIModificationMarksRepositoryItemProvider(this);
+		}
+
+		return hmiModificationMarksRepositoryItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMISeedModifications} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,6 +161,29 @@ public class HMIModificationmarksItemProviderAdapterFactory extends HMIModificat
 		}
 
 		return hmiChangePropagationDueToSoftwareDependencyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyStep} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HMIModifyStepItemProvider hmiModifyStepItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyStep}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHMIModifyStepAdapter() {
+		if (hmiModifyStepItemProvider == null) {
+			hmiModifyStepItemProvider = new HMIModifyStepItemProvider(this);
+		}
+
+		return hmiModifyStepItemProvider;
 	}
 
 	/**
@@ -285,9 +331,11 @@ public class HMIModificationmarksItemProviderAdapterFactory extends HMIModificat
 	 * @generated
 	 */
 	public void dispose() {
+		if (hmiModificationMarksRepositoryItemProvider != null) hmiModificationMarksRepositoryItemProvider.dispose();
 		if (hmiSeedModificationsItemProvider != null) hmiSeedModificationsItemProvider.dispose();
 		if (hmiModificationRepositoryItemProvider != null) hmiModificationRepositoryItemProvider.dispose();
 		if (hmiChangePropagationDueToSoftwareDependencyItemProvider != null) hmiChangePropagationDueToSoftwareDependencyItemProvider.dispose();
+		if (hmiModifyStepItemProvider != null) hmiModifyStepItemProvider.dispose();
 		if (hmiModifyActorStepItemProvider != null) hmiModifyActorStepItemProvider.dispose();
 		if (hmiModifySystemStepItemProvider != null) hmiModifySystemStepItemProvider.dispose();
 	}

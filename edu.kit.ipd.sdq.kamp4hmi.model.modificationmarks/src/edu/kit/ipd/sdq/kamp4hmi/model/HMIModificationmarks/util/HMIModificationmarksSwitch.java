@@ -9,10 +9,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.*;
-
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.ActorStep;
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
-
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -82,6 +79,14 @@ public class HMIModificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HMIModificationmarksPackage.HMI_MODIFICATION_MARKS_REPOSITORY: {
+				HMIModificationMarksRepository hmiModificationMarksRepository = (HMIModificationMarksRepository)theEObject;
+				T1 result = caseHMIModificationMarksRepository(hmiModificationMarksRepository);
+				if (result == null) result = caseAbstractKAMP4HMIModificationRepository(hmiModificationMarksRepository);
+				if (result == null) result = caseAbstractModificationRepository(hmiModificationMarksRepository);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HMIModificationmarksPackage.HMI_SEED_MODIFICATIONS: {
 				HMISeedModifications hmiSeedModifications = (HMISeedModifications)theEObject;
 				T1 result = caseHMISeedModifications(hmiSeedModifications);
@@ -105,16 +110,25 @@ public class HMIModificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HMIModificationmarksPackage.HMI_MODIFY_STEP: {
+				HMIModifyStep<?> hmiModifyStep = (HMIModifyStep<?>)theEObject;
+				T1 result = caseHMIModifyStep(hmiModifyStep);
+				if (result == null) result = caseAbstractModification(hmiModifyStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HMIModificationmarksPackage.HMI_MODIFY_ACTOR_STEP: {
-				HMIModifyActorStep<?> hmiModifyActorStep = (HMIModifyActorStep<?>)theEObject;
+				HMIModifyActorStep hmiModifyActorStep = (HMIModifyActorStep)theEObject;
 				T1 result = caseHMIModifyActorStep(hmiModifyActorStep);
+				if (result == null) result = caseHMIModifyStep(hmiModifyActorStep);
 				if (result == null) result = caseAbstractModification(hmiModifyActorStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case HMIModificationmarksPackage.HMI_MODIFY_SYSTEM_STEP: {
-				HMIModifySystemStep<?> hmiModifySystemStep = (HMIModifySystemStep<?>)theEObject;
+				HMIModifySystemStep hmiModifySystemStep = (HMIModifySystemStep)theEObject;
 				T1 result = caseHMIModifySystemStep(hmiModifySystemStep);
+				if (result == null) result = caseHMIModifyStep(hmiModifySystemStep);
 				if (result == null) result = caseAbstractModification(hmiModifySystemStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -135,6 +149,21 @@ public class HMIModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public <T extends HMISeedModifications> T1 caseAbstractKAMP4HMIModificationRepository(AbstractKAMP4HMIModificationRepository<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HMI Modification Marks Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HMI Modification Marks Repository</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseHMIModificationMarksRepository(HMIModificationMarksRepository object) {
 		return null;
 	}
 
@@ -184,6 +213,21 @@ public class HMIModificationmarksSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HMI Modify Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HMI Modify Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends Step> T1 caseHMIModifyStep(HMIModifyStep<T> object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>HMI Modify Actor Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -194,7 +238,7 @@ public class HMIModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends ActorStep> T1 caseHMIModifyActorStep(HMIModifyActorStep<T> object) {
+	public T1 caseHMIModifyActorStep(HMIModifyActorStep object) {
 		return null;
 	}
 
@@ -209,7 +253,7 @@ public class HMIModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends SystemStep> T1 caseHMIModifySystemStep(HMIModifySystemStep<T> object) {
+	public T1 caseHMIModifySystemStep(HMIModifySystemStep object) {
 		return null;
 	}
 

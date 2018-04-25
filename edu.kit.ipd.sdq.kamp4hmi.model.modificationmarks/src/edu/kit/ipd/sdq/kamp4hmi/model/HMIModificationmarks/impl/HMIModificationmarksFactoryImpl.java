@@ -3,10 +3,7 @@
 package edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.*;
-
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.ActorStep;
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
-
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -59,14 +56,26 @@ public class HMIModificationmarksFactoryImpl extends EFactoryImpl implements HMI
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case HMIModificationmarksPackage.HMI_MODIFICATION_MARKS_REPOSITORY: return createHMIModificationMarksRepository();
 			case HMIModificationmarksPackage.HMI_SEED_MODIFICATIONS: return createHMISeedModifications();
 			case HMIModificationmarksPackage.HMI_MODIFICATION_REPOSITORY: return createHMIModificationRepository();
 			case HMIModificationmarksPackage.HMI_CHANGE_PROPAGATION_DUE_TO_SOFTWARE_DEPENDENCY: return createHMIChangePropagationDueToSoftwareDependency();
+			case HMIModificationmarksPackage.HMI_MODIFY_STEP: return createHMIModifyStep();
 			case HMIModificationmarksPackage.HMI_MODIFY_ACTOR_STEP: return createHMIModifyActorStep();
 			case HMIModificationmarksPackage.HMI_MODIFY_SYSTEM_STEP: return createHMIModifySystemStep();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HMIModificationMarksRepository createHMIModificationMarksRepository() {
+		HMIModificationMarksRepositoryImpl hmiModificationMarksRepository = new HMIModificationMarksRepositoryImpl();
+		return hmiModificationMarksRepository;
 	}
 
 	/**
@@ -104,8 +113,18 @@ public class HMIModificationmarksFactoryImpl extends EFactoryImpl implements HMI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <T extends ActorStep> HMIModifyActorStep<T> createHMIModifyActorStep() {
-		HMIModifyActorStepImpl<T> hmiModifyActorStep = new HMIModifyActorStepImpl<T>();
+	public <T extends Step> HMIModifyStep<T> createHMIModifyStep() {
+		HMIModifyStepImpl<T> hmiModifyStep = new HMIModifyStepImpl<T>();
+		return hmiModifyStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HMIModifyActorStep createHMIModifyActorStep() {
+		HMIModifyActorStepImpl hmiModifyActorStep = new HMIModifyActorStepImpl();
 		return hmiModifyActorStep;
 	}
 
@@ -114,8 +133,8 @@ public class HMIModificationmarksFactoryImpl extends EFactoryImpl implements HMI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <T extends SystemStep> HMIModifySystemStep<T> createHMIModifySystemStep() {
-		HMIModifySystemStepImpl<T> hmiModifySystemStep = new HMIModifySystemStepImpl<T>();
+	public HMIModifySystemStep createHMIModifySystemStep() {
+		HMIModifySystemStepImpl hmiModifySystemStep = new HMIModifySystemStepImpl();
 		return hmiModifySystemStep;
 	}
 

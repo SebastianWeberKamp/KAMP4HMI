@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -67,13 +68,22 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int HMI_ELEMENT = 7;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_ELEMENT__ID = IECRepositoryPackage.IDENTIFIER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HMI_ELEMENT__NAME = 0;
+	int HMI_ELEMENT__NAME = IECRepositoryPackage.IDENTIFIER__NAME;
 
 	/**
 	 * The number of structural features of the '<em>HMI Element</em>' class.
@@ -82,7 +92,7 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HMI_ELEMENT_FEATURE_COUNT = 1;
+	int HMI_ELEMENT_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>HMI Element</em>' class.
@@ -91,7 +101,7 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HMI_ELEMENT_OPERATION_COUNT = 0;
+	int HMI_ELEMENT_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step <em>Step</em>}' class.
@@ -104,6 +114,15 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int STEP = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__ID = HMI_ELEMENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,7 +132,7 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int STEP__NAME = HMI_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Successor</b></em>' reference list.
+	 * The feature id for the '<em><b>Successor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,6 +169,15 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int ACTOR_STEP = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR_STEP__ID = STEP__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,7 +187,7 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int ACTOR_STEP__NAME = STEP__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Successor</b></em>' reference list.
+	 * The feature id for the '<em><b>Successor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -196,6 +224,15 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int SYSTEM_STEP = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_STEP__ID = STEP__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -205,7 +242,7 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int SYSTEM_STEP__NAME = STEP__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Successor</b></em>' reference list.
+	 * The feature id for the '<em><b>Successor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -361,6 +398,15 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	int IF = 5;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__ID = HMI_ELEMENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -423,6 +469,15 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	 * @generated
 	 */
 	int FOR = 6;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOR__ID = HMI_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -536,10 +591,10 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	EClass getStep();
 
 	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step#getSuccessor <em>Successor</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step#getSuccessor <em>Successor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Successor</em>'.
+	 * @return the meta object for the reference '<em>Successor</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step#getSuccessor()
 	 * @see #getStep()
 	 * @generated
@@ -760,17 +815,6 @@ public interface Kamp4hmiModelPackage extends EPackage {
 	EClass getHMIElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.HMIElement#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.HMIElement#getName()
-	 * @see #getHMIElement()
-	 * @generated
-	 */
-	EAttribute getHMIElement_Name();
-
-	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Condition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -836,7 +880,7 @@ public interface Kamp4hmiModelPackage extends EPackage {
 		EClass STEP = eINSTANCE.getStep();
 
 		/**
-		 * The meta object literal for the '<em><b>Successor</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Successor</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1016,14 +1060,6 @@ public interface Kamp4hmiModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass HMI_ELEMENT = eINSTANCE.getHMIElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HMI_ELEMENT__NAME = eINSTANCE.getHMIElement_Name();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.impl.ConditionImpl <em>Condition</em>}' class.

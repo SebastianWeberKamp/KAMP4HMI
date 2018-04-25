@@ -2,10 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.tests;
 
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksPackage;
-import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMISeedModifications;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -60,7 +59,7 @@ public class HMIModificationmarksExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.hmimodificationmarks"));
-				HMISeedModifications root = HMIModificationmarksFactory.eINSTANCE.createHMISeedModifications();
+				HMIModificationMarksRepository root = HMIModificationmarksFactory.eINSTANCE.createHMIModificationMarksRepository();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

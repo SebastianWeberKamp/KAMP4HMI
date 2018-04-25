@@ -66,6 +66,10 @@ edu.kit.ipd.sdq.kamp.updatesite,0.1.0.qualifier,file:/C:/Users/Jannis/Documents/
 edu.kit.ipd.sdq.kamp4hmi.model,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model/,4,false
 edu.kit.ipd.sdq.kamp4hmi.model.edit,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.edit/,4,false
 edu.kit.ipd.sdq.kamp4hmi.model.editor,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.editor/,4,false
+edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks,0.1.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks/,4,false
+edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks.edit,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks.edit/,4,false
+edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks.editor,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks.editor/,4,false
+edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks.tests,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.modificationmarks.tests/,4,false
 edu.kit.ipd.sdq.kamp4hmi.model.tests,1.0.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4HMI/edu.kit.ipd.sdq.kamp4hmi.model.tests/,4,false
 edu.kit.ipd.sdq.kamp4iec,0.1.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec/,4,false
 edu.kit.ipd.sdq.kamp4iec.model,0.1.0.qualifier,file:/C:/Users/Jannis/Documents/workspace/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model/,4,false

@@ -9,10 +9,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.*;
-
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.ActorStep;
-import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
-
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -81,6 +78,10 @@ public class HMIModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractKAMP4HMIModificationRepositoryAdapter();
 			}
 			@Override
+			public Adapter caseHMIModificationMarksRepository(HMIModificationMarksRepository object) {
+				return createHMIModificationMarksRepositoryAdapter();
+			}
+			@Override
 			public Adapter caseHMISeedModifications(HMISeedModifications object) {
 				return createHMISeedModificationsAdapter();
 			}
@@ -93,11 +94,15 @@ public class HMIModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createHMIChangePropagationDueToSoftwareDependencyAdapter();
 			}
 			@Override
-			public <T extends ActorStep> Adapter caseHMIModifyActorStep(HMIModifyActorStep<T> object) {
+			public <T extends Step> Adapter caseHMIModifyStep(HMIModifyStep<T> object) {
+				return createHMIModifyStepAdapter();
+			}
+			@Override
+			public Adapter caseHMIModifyActorStep(HMIModifyActorStep object) {
 				return createHMIModifyActorStepAdapter();
 			}
 			@Override
-			public <T extends SystemStep> Adapter caseHMIModifySystemStep(HMIModifySystemStep<T> object) {
+			public Adapter caseHMIModifySystemStep(HMIModifySystemStep object) {
 				return createHMIModifySystemStepAdapter();
 			}
 			@Override
@@ -155,6 +160,20 @@ public class HMIModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository <em>HMI Modification Marks Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository
+	 * @generated
+	 */
+	public Adapter createHMIModificationMarksRepositoryAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMISeedModifications <em>HMI Seed Modifications</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -193,6 +212,20 @@ public class HMIModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHMIChangePropagationDueToSoftwareDependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyStep <em>HMI Modify Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyStep
+	 * @generated
+	 */
+	public Adapter createHMIModifyStepAdapter() {
 		return null;
 	}
 

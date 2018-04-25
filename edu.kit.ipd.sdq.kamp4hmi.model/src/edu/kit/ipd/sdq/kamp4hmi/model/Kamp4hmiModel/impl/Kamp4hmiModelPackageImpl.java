@@ -360,15 +360,6 @@ public class Kamp4hmiModelPackageImpl extends EPackageImpl implements Kamp4hmiMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHMIElement_Name() {
-		return (EAttribute)hmiElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCondition() {
 		return conditionEClass;
 	}
@@ -448,7 +439,6 @@ public class Kamp4hmiModelPackageImpl extends EPackageImpl implements Kamp4hmiMo
 		createEReference(forEClass, FOR__LOOP_END_SUCCESSOR);
 
 		hmiElementEClass = createEClass(HMI_ELEMENT);
-		createEAttribute(hmiElementEClass, HMI_ELEMENT__NAME);
 
 		conditionEClass = createEClass(CONDITION);
 		createEAttribute(conditionEClass, CONDITION__NAME);
@@ -491,10 +481,11 @@ public class Kamp4hmiModelPackageImpl extends EPackageImpl implements Kamp4hmiMo
 		systemStepEClass.getESuperTypes().add(this.getStep());
 		ifEClass.getESuperTypes().add(this.getHMIElement());
 		forEClass.getESuperTypes().add(this.getHMIElement());
+		hmiElementEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(stepEClass, Step.class, "Step", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStep_Successor(), this.getHMIElement(), null, "successor", null, 0, -1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStep_Successor(), this.getHMIElement(), null, "successor", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actorStepEClass, ActorStep.class, "ActorStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -522,7 +513,6 @@ public class Kamp4hmiModelPackageImpl extends EPackageImpl implements Kamp4hmiMo
 		initEReference(getFor_LoopEndSuccessor(), this.getStep(), null, "loopEndSuccessor", null, 1, 1, For.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hmiElementEClass, HMIElement.class, "HMIElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHMIElement_Name(), ecorePackage.getEString(), "Name", null, 0, 1, HMIElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -2,11 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks;
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
-
 import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,5 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface HMIModifySystemStep<T extends SystemStep> extends AbstractModification<T, EObject> {
+public interface HMIModifySystemStep extends HMIModifyStep<SystemStep> {
 } // HMIModifySystemStep
