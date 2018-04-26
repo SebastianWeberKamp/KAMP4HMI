@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="de.uka.ipd.sdq.identifier.Identifier"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureModelLookup"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIStepModification"/>
@@ -10,16 +9,12 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Kamp4hmiModelFactory"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Repository"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.If"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.For"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMISeedModifications"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifySystemStep"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksFactory"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationRepository"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.HMIElement"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.common.util.EList"/>
@@ -41,6 +36,11 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProperty"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifySystemStep"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyActorStep"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Step"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.If"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.ActorStep"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.HMIElement"/>
 </qualifiedTypeNameHistroy>
